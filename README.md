@@ -116,7 +116,7 @@ After analyzing the eigenvalues and the characteristics of these eigenvalues, na
 When implementing a closed loop speed-to-elevator feedback loop, we first had to set a target zone for where we wanted our phugoid eigenvalues to ideally be. This target zone is defined by the ranges of our time constant and dampening ratio. The time constant ($\tau$) has to be in the range - (0 $\le \tau \le$ 20) [seconds], and the dampening ratio ($\zeta$) has to be in the range - (0.9 $\le \zeta \le$ 0.95). The values of the real values of the eigenvalues only depend on the time constant, so these values were found over the corresponding range first by using the relation: $n = -\frac{1}{\tau}$, where n is the real part of the eigenvalues. Once a vector of the real parts of our target zone were found, the imaginary parts of the eigenvector could be found by the relation: $\omega = n \sqrt{(\frac{1}{\zeta})^2-1}$, where we implemented each individual real part, n, and calculated the imaginary part over the range of $\zeta$. After this was done over all n, inside it's corresponding vector, the bounds were found and are plotted below:
 <br/>
 
-Target Zone Bounds:<br/> <br/>
+**Target Zone Bounds:**<br/>
 
 <img src="./Images/TargetZone.jpg" />
 <br/>
@@ -140,7 +140,7 @@ $$
 To find the ideal values for the proportional gain, $k_1$, we took the $k_1$ that corresponded to the eigenvalues with the closest distance to the target region. It should be noted that we took this distance for only the eigenvalues that had both imaginary and real parts since eigenvalues with only real or imaginary parts are unstable. Plots of the the eigenvalues corresponding to the shortest distance are plotted below. Since larger  negative real parts have more stable behavior the largest negative real part that also has imaginary parts was also plotted in conjunction to the the closest eigenvalues.
 <br/>
 
-Finding Ideal Proportional Gain Values:<br/> <br/>
+**Finding Ideal Proportional Gain Values:** <br/>
 
 <img src="./Images/EigenVec_P.jpg" />
 <br/>
@@ -159,7 +159,7 @@ $k_1$ = -0.00084 (Closest Distance) <br/>
 When implementing the closed-loop PWD model response for proportional-only control, the two different gain values of $k_1$ were used and plotted against each other for comparison. The plots for the variables of $\Delta u, \Delta \theta, and \Delta \delta_e$ are plotted versus time in the following plots for a perturbation of $\Delta u$ = 10 $\frac{m}{s}$ :
 <br/>
 
-Close-Loop for P-Only Control<br/><br/>
+**Close-Loop for P-Only Control**<br/>
 
 <img src="./Images/U_P.jpg" /><br/>
 
@@ -179,14 +179,14 @@ $$
 
 A range of $k_1$ and $k_2$ values were then varied over reasonable ranges until the eigenvalues were with in the target range. A graphical representation of this is provided below:<br/>
 
-Eigenvalues Varying $k_1$ and $k_2$<br/><br/>
+**Eigenvalues Varying $k_1$ and $k_2$**<br/>
 
 <img src="./Images/Kd_val_out.jpg" />
 <br/>
 
 To then find the ideal gains corresponding to the eigenvalues in this region, the values with the largest negative real parts were chosen as the larger the negative real part the more stable the system should be. A plot of the chosen eigenvalues and the corresponding gain values are provided below:<br/>
 
-Largest Negative Real Part<br/><br/>
+**Largest Negative Real Part**<br/>
 
 <img src="./Images/K2_vals.jpg" /><br/><br/>
 
@@ -201,7 +201,7 @@ $k_2$ = 0.0263 <br/> <br/>
 ### **Part e.)**
 Implementing the closed-loop response for the PD controller and comparing the gains that we found for the two cases with the largest negative real parts for a perturbation of $\Delta u$ = 10 [m/s], the following state variable response were found:<br/>
 
-Close-Loop PWD Approximation for PD-Control<br/><br/>
+**Close-Loop PWD Approximation for PD-Control**<br/>
 
 <img src="./Images/Kd_u.jpg" /><br/>
 
@@ -273,7 +273,7 @@ The eigenvalues of the PWD approximation are much different than the full linear
 ### **Part b.)**
 When simulating the the closed-loop response of the full dynamics model, for the initial conditions: $[\Delta u(0), \Delta w,\Delta q, \Delta\theta]^T = [10, 0, 0, 0]^T$, the following response for each of the state variables and the elevator response are as follows:<br/>
 
-Full Linearized Longitudinal System:<br/><br/>
+**Full Linearized Longitudinal System:**<br/>
 
 <img src="./Images/State_full.jpg" /><br/>
 
