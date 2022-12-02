@@ -113,8 +113,7 @@ After analyzing the eigenvalues and the characteristics of these eigenvalues, na
 ## Question 2 - Closed Loop:
 
 ### **Part a.)**
-When implementing a closed loop speed-to-elevator feedback loop, we first had to set a target zone for where we wanted our phugoid eigenvalues to ideally be. This target zone is defined by the ranges of our time constant and dampening ratio. The time constant ($\tau$) has to be in the range - (0 $\le \tau \le$ 20) [seconds], and the dampening ratio ($\zeta$) has to be in the range - (0.9 $\le \zeta \le$ 0.95). The values of the real values of the eigenvalues only depend on the time constant, so these values were found over the corresponding range first by using the relation: $n = -\frac{1}{\tau}$, where n is the real part of the eigenvalues. Once a vector of the real parts of our target zone were found, the imaginary parts of the eigenvector could be found by the relation: $\omega = n \sqrt{(\frac{1}{\zeta})^2-1}$, where we implemented each individual real part, n, and calculated the imaginary part over the range of $\zeta$. After this was done over all n, inside it's corresponding vector, the bounds were found and are plotted below:
-<br/>
+When implementing a closed loop speed-to-elevator feedback loop, we first had to set a target zone for where we wanted our phugoid eigenvalues to ideally be. This target zone is defined by the ranges of our time constant and dampening ratio. The time constant ($\tau$) has to be in the range - (0 $\le \tau \le$ 20) [seconds], and the dampening ratio ($\zeta$) has to be in the range - (0.9 $\le \zeta \le$ 0.95). The values of the real values of the eigenvalues only depend on the time constant, so these values were found over the corresponding range first by using the relation: $n = -\frac{1}{\tau}$, where n is the real part of the eigenvalues. Once a vector of the real parts of our target zone were found, the imaginary parts of the eigenvector could be found by the relation: $\omega = n \sqrt{(\frac{1}{\zeta})^2-1}$, where we implemented each individual real part, n, and calculated the imaginary part over the range of $\zeta$. After this was done over all n, inside it's corresponding vector, the bounds were found and are plotted below:<br/><br/>
 
 **Target Zone Bounds:**<br/>
 
@@ -137,8 +136,7 @@ $$
 $$
 <br/>
 
-To find the ideal values for the proportional gain, $k_1$, we took the $k_1$ that corresponded to the eigenvalues with the closest distance to the target region. It should be noted that we took this distance for only the eigenvalues that had both imaginary and real parts since eigenvalues with only real or imaginary parts are unstable. Plots of the the eigenvalues corresponding to the shortest distance are plotted below. Since larger  negative real parts have more stable behavior the largest negative real part that also has imaginary parts was also plotted in conjunction to the the closest eigenvalues.
-<br/>
+To find the ideal values for the proportional gain, $k_1$, we took the $k_1$ that corresponded to the eigenvalues with the closest distance to the target region. It should be noted that we took this distance for only the eigenvalues that had both imaginary and real parts since eigenvalues with only real or imaginary parts are unstable. Plots of the the eigenvalues corresponding to the shortest distance are plotted below. Since larger  negative real parts have more stable behavior the largest negative real part that also has imaginary parts was also plotted in conjunction to the the closest eigenvalues.<br/><br/>
 
 **Finding Ideal Proportional Gain Values:** <br/>
 
@@ -156,8 +154,7 @@ $k_1$ = -0.0009 (Largest Negative Real Part) <br/>
 $k_1$ = -0.00084 (Closest Distance) <br/>
 
 ### **Part c.)**
-When implementing the closed-loop PWD model response for proportional-only control, the two different gain values of $k_1$ were used and plotted against each other for comparison. The plots for the variables of $\Delta u, \Delta \theta, and \Delta \delta_e$ are plotted versus time in the following plots for a perturbation of $\Delta u$ = 10 $\frac{m}{s}$ :
-<br/>
+When implementing the closed-loop PWD model response for proportional-only control, the two different gain values of $k_1$ were used and plotted against each other for comparison. The plots for the variables of $\Delta u, \Delta \theta, and \Delta \delta_e$ are plotted versus time in the following plots for a perturbation of $\Delta u$ = 10 $\frac{m}{s}$ :<br/><br/>
 
 **Close-Loop for P-Only Control:**<br/>
 
