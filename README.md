@@ -159,7 +159,7 @@ $k_1$ = -0.00084 (Closest Distance) <br/>
 When implementing the closed-loop PWD model response for proportional-only control, the two different gain values of $k_1$ were used and plotted against each other for comparison. The plots for the variables of $\Delta u, \Delta \theta, and \Delta \delta_e$ are plotted versus time in the following plots for a perturbation of $\Delta u$ = 10 $\frac{m}{s}$ :
 <br/>
 
-**Close-Loop for P-Only Control**<br/>
+**Close-Loop for P-Only Control:**<br/>
 
 <img src="./Images/U_P.jpg" /><br/>
 
@@ -177,16 +177,16 @@ $$
 $$
 <br/>
 
-A range of $k_1$ and $k_2$ values were then varied over reasonable ranges until the eigenvalues were with in the target range. A graphical representation of this is provided below:<br/>
+A range of $k_1$ and $k_2$ values were then varied over reasonable ranges until the eigenvalues were with in the target range. A graphical representation of this is provided below:<br/><br/>
 
-**Eigenvalues Varying $k_1$ and $k_2$**<br/>
+**Eigenvalues Varying $k_1$ and $k_2$:**<br/>
 
 <img src="./Images/Kd_val_out.jpg" />
 <br/>
 
-To then find the ideal gains corresponding to the eigenvalues in this region, the values with the largest negative real parts were chosen as the larger the negative real part the more stable the system should be. A plot of the chosen eigenvalues and the corresponding gain values are provided below:<br/>
+To then find the ideal gains corresponding to the eigenvalues in this region, the values with the largest negative real parts were chosen as the larger the negative real part the more stable the system should be. A plot of the chosen eigenvalues and the corresponding gain values are provided below:<br/><br/>
 
-**Largest Negative Real Part**<br/>
+**Largest Negative Real Part:**<br/>
 
 <img src="./Images/K2_vals.jpg" /><br/><br/>
 
@@ -199,9 +199,9 @@ $k_1$ = 0.0001 <br/>
 $k_2$ = 0.0263 <br/> <br/>
 
 ### **Part e.)**
-Implementing the closed-loop response for the PD controller and comparing the gains that we found for the two cases with the largest negative real parts for a perturbation of $\Delta u$ = 10 [m/s], the following state variable response were found:<br/>
+Implementing the closed-loop response for the PD controller and comparing the gains that we found for the two cases with the largest negative real parts for a perturbation of $\Delta u$ = 10 [m/s], the following state variable response were found:<br/><br/>
 
-**Close-Loop PWD Approximation for PD-Control**<br/>
+**Close-Loop PWD Approximation for PD-Control:**<br/>
 
 <img src="./Images/Kd_u.jpg" /><br/>
 
@@ -271,7 +271,7 @@ $\lambda_{1,2}$: -0.0651 $\pm$ 0.0220i<br/>
 The eigenvalues of the PWD approximation are much different than the full linearized set. The coupled nature of the state variables inherently gives phugoid eigenvalues with much larger negative real parts than the approximation gives. This meaning the the full model is more damped than the PWD approximation, while also having different oscillatory motion due to the different imaginary eigenvalues. This is to be expected as decoupling variables that have derivative control will play a much larger role than just decoupling P-only control since the state variables are much more interrelated in the closed loop matrix.<br/>
 
 ### **Part b.)**
-When simulating the the closed-loop response of the full dynamics model, for the initial conditions: $[\Delta u(0), \Delta w,\Delta q, \Delta\theta]^T = [10, 0, 0, 0]^T$, the following response for each of the state variables and the elevator response are as follows:<br/>
+When simulating the the closed-loop response of the full dynamics model, for the initial conditions: $[\Delta u(0), \Delta w,\Delta q, \Delta\theta]^T = [10, 0, 0, 0]^T$, the following response for each of the state variables and the elevator response are as follows:<br/><br/>
 
 **Full Linearized Longitudinal System:**<br/>
 
