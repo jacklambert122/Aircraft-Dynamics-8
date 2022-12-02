@@ -19,7 +19,7 @@ To calculate the natural frequency, dampening ratio, and time constant - the fol
 <br/>
 
 $$
-\omega_n = \sqrt{\omega^2 + n^2},\,\,\,\,\,\,\,\,\, \zeta = -\frac{n}{\omega_n},\,\,\,\,\,\,\,\ \tau = -\frac{1}{n}
+\omega_n = \sqrt{\omega^2 + n^2}, \qquad \zeta = -\frac{n}{\omega_n}, \qquad \tau = -\frac{1}{n}
 $$
 <br/>
 
