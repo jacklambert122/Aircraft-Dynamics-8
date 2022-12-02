@@ -28,18 +28,24 @@ Where n and $\omega$ are the real and imaginary parts of the eigenvalues, respec
 
 <ins>Short Period Mode: </ins>
 
-Eigenvalues ($\lambda_{1,2}$): -0.3717 $\pm$ 0.8869i <br/>
-Natural Frequency ($\omega_n$): 0.9616 [rad/s] <br/>
-Dampening Coefficient ($\zeta$): 0.3865 <br/>
-Time Constant ($\tau$): 2.6906 [s] <br/>
+Eigenvalues $\lambda_{1,2}$: -0.3717 $\pm$ 0.8869i <br/>
+
+Natural Frequency $\omega_n$: 0.9616 [rad/s] <br/>
+
+Dampening Coefficient $\zeta$: 0.3865 <br/>
+
+Time Constant $\tau$: 2.6906 [s] <br/>
 <br/>
 
 <ins> Phugoid Mode: </ins>
 
 Eigenvalues ($\lambda_{1,2}$): -0.0033 $\pm$ 0.0672i <br/>
+
 Natural Frequency ($\omega_n$): 0.0673 [rad/s] <br/>
+
 Dampening Coefficient ($\zeta$): 0.0489 <br/>
 Time Constant ($\tau$): 304.025 [s] <br/>
+
 <br/>
 
 As can be seen from the open loop A matrix and it's corresponding eigenvalues, the Boeing 747 is stable as the the eigenvalues for both the short period mode and the phugoid mode have negative real parts, meaning that the envelope driving the imaginary part's ocsillatory motion decays, driving the perturbation to nominal conditions. It can also be seen that the damping coefficient is greater than 0, which also shows stability.
