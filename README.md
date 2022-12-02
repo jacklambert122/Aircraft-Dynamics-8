@@ -1,4 +1,4 @@
-# ASEN 3128 Homework 8
+# Boeing 747 Stability Simulations - Linearized Longitudinal Dynamics Sets
 
 ## Question 1 - Open Loop:
 ### **Part a.)**
@@ -39,12 +39,13 @@ Time Constant $\tau$: 2.6906 [s] <br/>
 
 <ins> Phugoid Mode: </ins>
 
-Eigenvalues ($\lambda_{1,2}$): -0.0033 $\pm$ 0.0672i <br/>
+Eigenvalues $\lambda_{1,2}$: -0.0033 $\pm$ 0.0672i <br/>
 
-Natural Frequency ($\omega_n$): 0.0673 [rad/s] <br/>
+Natural Frequency $\omega_n$: 0.0673 [rad/s] <br/>
 
-Dampening Coefficient ($\zeta$): 0.0489 <br/>
-Time Constant ($\tau$): 304.025 [s] <br/>
+Dampening Coefficient $\zeta$: 0.0489 <br/>
+
+Time Constant $\tau$: 304.025 [s] <br/>
 
 <br/>
 
@@ -119,7 +120,7 @@ After analyzing the eigenvalues and the characteristics of these eigenvalues, na
 ## Question 2 - Closed Loop:
 
 ### **Part a.)**
-When implementing a closed loop speed-to-elevator feedback loop, we first had to set a target zone for where we wanted our phugoid eigenvalues to ideally be. This target zone is defined by the ranges of our time constant and dampening ratio. The time constant ($\tau$) has to be in the range - (0 $\le \tau \le$ 20) [seconds], and the dampening ratio ($\zeta$) has to be in the range - (0.9 $\le \zeta \le$ 0.95). The values of the real values of the eigenvalues only depend on the time constant, so these values were found over the corresponding range first by using the relation: $n = -\frac{1}{\tau}$, where n is the real part of the eigenvalues. Once a vector of the real parts of our target zone were found, the imaginary parts of the eigenvector could be found by the relation: $\omega = n \sqrt{(\frac{1}{\zeta})^2-1}$, where we implemented each individual real part, n, and calculated the imaginary part over the range of $\zeta$. After this was done over all n, inside it's corresponding vector, the bounds were found and are plotted below:<br/><br/>
+When implementing a closed loop speed-to-elevator feedback loop, we first had to set a target zone for where we wanted our phugoid eigenvalues to ideally be. This target zone is defined by the ranges of our time constant and dampening ratio. The time constant $\tau$ has to be in the range - 0 $\le \tau \le$ 20 [seconds], and the dampening ratio $\zeta$ has to be in the range - (0.9 $\le \zeta \le$ 0.95). The values of the real values of the eigenvalues only depend on the time constant, so these values were found over the corresponding range first by using the relation: $n = -\frac{1}{\tau}$, where n is the real part of the eigenvalues. Once a vector of the real parts of our target zone were found, the imaginary parts of the eigenvector could be found by the relation: $\omega = n \sqrt{(\frac{1}{\zeta})^2-1}$, where we implemented each individual real part, n, and calculated the imaginary part over the range of $\zeta$. After this was done over all n, inside it's corresponding vector, the bounds were found and are plotted below:<br/><br/>
 
 **Target Zone Bounds:**<br/>
 
